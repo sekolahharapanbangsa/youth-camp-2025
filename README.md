@@ -10,154 +10,6 @@ A modern, comprehensive attendance management system for Youth Camp 2025, built 
 
 This attendance system provides real-time tracking, photo verification, and comprehensive management features for a 3-day youth camp experience.
 
-## ✨ Features
-
-### 📱 Attendance Management
-- **Time-based Check-in/Check-out**: Automated scheduling with specific time windows
-  - Check-in Pagi: 06:00-08:00
-  - Check-out Malam: 19:00-21:00 (Hari 1 & 2)
-  - Check-out Akhir: 15:00-18:00 (Hari 3)
-- **Smart Time Validation**: Buttons automatically activate/deactivate based on scheduled times
-- **Real-time Status Tracking**: Live attendance status updates with visual indicators
-
-### 📸 Photo Verification System
-- **Camera Integration**: Built-in photo capture for attendance verification
-- **Time-controlled Access**: Camera buttons only active during valid attendance periods
-- **Photo Gallery**: Organized display of captured photos by day and session
-- **Image Management**: View, manage, and organize attendance photos
-
-### 📊 Dashboard & Analytics
-- **Participant Statistics**: Real-time overview of attendance rates
-- **Session Tracking**: Detailed breakdown by day and session type
-- **Visual Progress Indicators**: Progress bars and completion metrics
-- **Responsive Design**: Optimized for desktop and mobile devices
-
-### 🔐 Backend API
-- **RESTful API**: Complete backend endpoints for data management
-- **Database Integration**: Prisma ORM with SQLite for data persistence
-- **Real-time Updates**: WebSocket support for live data synchronization
-- **Type Safety**: Full TypeScript implementation throughout
-
-## 🛠️ Technology Stack
-
-### Core Framework
-- **⚡ Next.js 15** - React framework with App Router
-- **📘 TypeScript 5** - Type-safe development
-- **🎨 Tailwind CSS 4** - Modern utility-first styling
-
-### UI Components & Design
-- **🧩 shadcn/ui** - High-quality accessible components
-- **🎯 Lucide React** - Beautiful icon library
-- **🌈 Framer Motion** - Smooth animations and transitions
-- **📱 Responsive Design** - Mobile-first approach
-
-### Database & Backend
-- **🗄️ Prisma ORM** - Type-safe database operations
-- **💾 SQLite** - Lightweight database solution
-- **🔄 Real-time Updates** - WebSocket integration
-- **🔐 API Security** - Protected endpoints and validation
-
-### Image & Media
-- **📸 Camera Integration** - WebRTC camera access
-- **🖼️ Image Processing** - Base64 encoding and management
-- **📊 Media Gallery** - Organized photo display system
-
-## 🌐 SEO & Metadata
-
-### 📝 Search Engine Optimization
-- **Meta Tags**: Lengkap dengan title, description, dan keywords
-- **Open Graph**: Optimized untuk social media sharing
-- **Twitter Cards**: Enhanced preview untuk Twitter
-- **Robots.txt**: Konfigurasi crawling untuk search engines
-- **Sitemap.xml**: Peta situs untuk indexing yang lebih baik
-
-### 📱 Progressive Web App (PWA)
-- **Manifest.json**: Konfigurasi PWA untuk installable app
-- **Service Worker**: Ready untuk offline functionality
-- **App Icons**: Multiple sizes untuk berbagai devices
-- **Theme Color**: Konsisten dengan brand identity
-
-### 🔧 Environment Configuration
-- **.env.example**: Template konfigurasi environment
-- **Security**: Proper environment variable handling
-- **Scalability**: Ready untuk production deployment
-
-### 📊 Analytics & Monitoring
-- **Google Analytics**: Ready untuk tracking
-- **Search Console**: Verification support
-- **Performance**: Optimized metadata loading
-
-## 🚀 Quick Start
-
-```bash
-# Install dependencies
-npm install
-
-# Set up the database
-npm run db:push
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
-```
-
-Open [http://localhost:3000](http://localhost:3000) to access the Youth Camp 2025 attendance system.
-
-**Admin Access:** [http://localhost:3000/admin](http://localhost:3000/admin) (Password: admin123)
-
-## 👨‍💼 Akses Admin
-
-### 🔐 Login Admin
-- **URL:** `http://localhost:3000/admin`
-- **Password:** `admin123`
-- **Fitur:** Upload data siswa, export laporan, management foto
-
-### 📋 Fitur Admin Panel
-- **Data Siswa:** Upload CSV, download template, export data
-- **Kehadiran:** Monitoring real-time, export laporan
-- **Gallery:** Management foto kehadiran
-- **Laporan:** Export data dalam format CSV
-
-### 🛠️ API Endpoints Admin
-- `POST /api/participants/upload` - Upload data siswa (CSV)
-- `GET /api/participants/export` - Export data siswa
-- `GET /api/attendance/export` - Export laporan kehadiran
-- `GET /api/gallery` - Get semua foto kehadiran
-
-### 📋 Cara Penggunaan Admin Panel
-
-#### 1. **Login ke Admin Panel**
-- Buka browser dan kunjungi `http://localhost:3000/admin`
-- Masukkan password: `admin123`
-- Klik tombol "Login"
-
-#### 2. **Upload Data Siswa**
-- Pilih tab "Data Siswa"
-- Download template CSV terlebih dahulu
-- Isi data siswa sesuai format template
-- Upload file CSV yang sudah diisi
-- Monitor hasil upload (berhasil/gagal)
-
-#### 3. **Monitoring Kehadiran**
-- Pilih tab "Kehadiran" untuk melihat semua record absensi
-- Filter berdasarkan hari dan jenis sesi
-- Export data kehadiran dalam format CSV
-
-#### 4. **Management Gallery**
-- Pilih tab "Gallery" untuk melihat semua foto kehadiran
-- Foto diorganisir berdasarkan hari dan sesi
-- Download foto jika diperlukan
-
-#### 5. **Export Laporan**
-- Pilih tab "Laporan" untuk export data
-- Export data siswa dan kehadiran dalam format CSV
-- File otomatis terdownload dengan timestamp
-
 ## 👨‍🎓 Cara Penggunaan untuk Siswa
 
 ### 📋 Panduan Lengkap Penggunaan Sistem Absensi
@@ -280,6 +132,102 @@ Jika mengalami masalah teknis yang tidak bisa diselesaikan:
 - Gunakan filter atau efek pada foto
 - Minimize browser saat proses berlangsung
 - Gunakan VPN yang bisa memperlambat koneksi
+
+## ✨ Features
+
+### 📱 Attendance Management
+- **Time-based Check-in/Check-out**: Automated scheduling with specific time windows
+  - Check-in Pagi: 06:00-08:00
+  - Check-out Malam: 19:00-21:00 (Hari 1 & 2)
+  - Check-out Akhir: 15:00-18:00 (Hari 3)
+- **Smart Time Validation**: Buttons automatically activate/deactivate based on scheduled times
+- **Real-time Status Tracking**: Live attendance status updates with visual indicators
+
+### 📸 Photo Verification System
+- **Camera Integration**: Built-in photo capture for attendance verification
+- **Time-controlled Access**: Camera buttons only active during valid attendance periods
+- **Photo Gallery**: Organized display of captured photos by day and session
+- **Image Management**: View, manage, and organize attendance photos
+
+### 📊 Dashboard & Analytics
+- **Participant Statistics**: Real-time overview of attendance rates
+- **Session Tracking**: Detailed breakdown by day and session type
+- **Visual Progress Indicators**: Progress bars and completion metrics
+- **Responsive Design**: Optimized for desktop and mobile devices
+
+### 🔐 Backend API
+- **RESTful API**: Complete backend endpoints for data management
+- **Database Integration**: Prisma ORM with SQLite for data persistence
+- **Real-time Updates**: WebSocket support for live data synchronization
+- **Type Safety**: Full TypeScript implementation throughout
+
+## 🛠️ Technology Stack
+
+### Core Framework
+- **⚡ Next.js 15** - React framework with App Router
+- **📘 TypeScript 5** - Type-safe development
+- **🎨 Tailwind CSS 4** - Modern utility-first styling
+
+### UI Components & Design
+- **🧩 shadcn/ui** - High-quality accessible components
+- **🎯 Lucide React** - Beautiful icon library
+- **🌈 Framer Motion** - Smooth animations and transitions
+- **📱 Responsive Design** - Mobile-first approach
+
+### Database & Backend
+- **🗄️ Prisma ORM** - Type-safe database operations
+- **💾 SQLite** - Lightweight database solution
+- **🔄 Real-time Updates** - WebSocket integration
+- **🔐 API Security** - Protected endpoints and validation
+
+### Image & Media
+- **📸 Camera Integration** - WebRTC camera access
+- **🖼️ Image Processing** - Base64 encoding and management
+- **📊 Media Gallery** - Organized photo display system
+
+## 🌐 SEO & Metadata
+
+### 📝 Search Engine Optimization
+- **Meta Tags**: Lengkap dengan title, description, dan keywords
+- **Open Graph**: Optimized untuk social media sharing
+- **Twitter Cards**: Enhanced preview untuk Twitter
+- **Robots.txt**: Konfigurasi crawling untuk search engines
+- **Sitemap.xml**: Peta situs untuk indexing yang lebih baik
+
+### 📱 Progressive Web App (PWA)
+- **Manifest.json**: Konfigurasi PWA untuk installable app
+- **Service Worker**: Ready untuk offline functionality
+- **App Icons**: Multiple sizes untuk berbagai devices
+- **Theme Color**: Konsisten dengan brand identity
+
+### 🔧 Environment Configuration
+- **.env.example**: Template konfigurasi environment
+- **Security**: Proper environment variable handling
+- **Scalability**: Ready untuk production deployment
+
+### 📊 Analytics & Monitoring
+- **Google Analytics**: Ready untuk tracking
+- **Search Console**: Verification support
+- **Performance**: Optimized metadata loading
+
+## 🚀 Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Set up the database
+npm run db:push
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
 
 ## 📁 Project Structure
 
