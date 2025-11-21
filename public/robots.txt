@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*.json$
+
+Sitemap: https://youthcamp.shb.sch.id/sitemap.xml

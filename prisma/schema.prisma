@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Participant {
+  id           String   @id @default(cuid())
+  nis          String   @unique
+  fullName     String
+  gender       String
+  birthPlace   String
+  birthDate    DateTime
+  address      String
+  whatsapp     String
+  email        String
+  schoolName   String
+  grade        String
+  parentName   String
+  parentPhone  String
+  medicalHistory String?
+  status       String   @default("pending")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  attendances  Attendance[]
+}
+
+model Attendance {
+  id            String   @id @default(cuid())
+  nis           String
+  day           Int
+  sessionType   String
+  timestamp     DateTime @default(now())
+  status        String   @default("present")
+  notes         String?
+  photoUrl       String?
+  photoName      String?
+  createdAt     DateTime @default(now())
+  
+  participant   Participant @relation(fields: [nis], references: [nis])
+}
